@@ -1,0 +1,28 @@
+mat-toolbar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .space {
+    flex: 1 1 auto;
+}
+
+.create-btn {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #e92085;
+    color: #fff;
+}
+
+h1 {
+    padding: 10px 20px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}

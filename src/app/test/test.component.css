@@ -1,0 +1,23 @@
+.container {
+    margin: 16px;
+    position: relative;
+}
+
+.todo {
+    padding:  8px 16px;
+    list-style: none;
+}
+
+.todo-item {
+    padding:  8px 16px;
+    border:1px solid #2b2020
+}
+
+span {
+    padding:  8px 16px;
+}
+
+.binding {
+    padding: 10px 20px;
+    margin: 20px;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+    <ul class="todo">
+      <li *ngFor="let todo of todos" class="todo-item">
+        <span>{{ todo.id }}</span>
+        <span> {{ todo.name }}</span>
+       <span>{{ todo.title }}</span>
+      </li>
+    </ul>
+  </div>
+  
+<div class="binding">
+    <h2>{{ name }}</h2>
+    <h2>{{ greeting() }}</h2>
+    <h2>{{ 2 + 2 }}</h2>
+    <h2>{{ "Welcome " + name }}</h2>
+    <h2>{{ name.length }}</h2>
+    <h2>{{ name.toUpperCase() }}</h2>
+  
+    <input id="id1" [disabled]="isdisabled" type="text" value="Yesuf Fenta" />
+  
+    <button (click)="onClick()">Greet</button>
+    <button (click)="greetingButton = 'Welcome Yesuf Fenta'">Greet Yesuf</button>
+    <h2>{{ greetingButton }}</h2>
+  
+    <input type="text" [(ngModel)]="name1" />
+    {{ name1 }}
+  </div>
+  

@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]= "formTask" (ngSubmit)="onSubmit()" class="form-container">
+        <mat-form-field appearance="outline">
+            <mat-label>Task Name</mat-label>
+            <input matInput placeholder="Enter Task Name" formControlName = "name">
+          </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Task Title</mat-label>
+            <input matInput placeholder="Enter Task Title" formControlName ="title">
+        </mat-form-field>
+        <div formArrayName="issues">
+          <h1>issues</h1>
+          <button mat-raised-button color="accent" class="add-btn" (click)="addIssues()">Add Issue</button>
+          <div *ngFor="let issue of issues.controls; let i=index" [formGroupName]="i">
+              <mat-form-field appearance="outline">
+                  <mat-label>Issue Name</mat-label>
+                  <input matInput placeholder="Enter Issue Name" formControlName="name">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                  <mat-label>Issue Title</mat-label>
+                  <input matInput placeholder="Enter Issue Title" formControlName="title">
+              </mat-form-field>
+              <button mat-raised-button color="warn" class="delete-btn" (click)="deleteIssue(i)">Delete</button>
+          </div>
+      </div>
+            <button mat-raised-button color="primary" class="submit-btn" type="submit" [disabled]="!formTask.valid">Submit</button>
+    </form>
+  </div>
